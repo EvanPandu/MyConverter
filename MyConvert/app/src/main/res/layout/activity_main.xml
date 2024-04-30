@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/etSuhu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Masukkan Suhu"
+                            android:inputType="numberDecimal"
+                            android:layout_margin="10dp"/>
+
+                        <Spinner
+                            android:id="@+id/Opsi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"/>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnConvert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="CONVERT"
+                            android:textSize="28sp"
+                            android:backgroundTint="@color/primary"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnClear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="CLEAR"
+                            android:textSize="28sp"
+                            android:backgroundTint="@color/primary"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_below="@+id/btnConvert"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/LayoutHasil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvHasilHitung"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HASIL HITUNG :"
+                    android:textSize="28sp"
+                    android:textColor="@color/black"
+                    android:layout_margin="10dp"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="3dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvHasilConvert"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hasil Convert = "
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_margin="10dp"/>
+
+                        <TextView
+                            android:id="@+id/tvRumus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rumus : "
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_below="@+id/tvHasilConvert"
+                            android:layout_margin="10dp"/>
+
+                        <TextView
+                            android:id="@+id/tvRumusnya"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rumus"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_below="@+id/tvRumus"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
